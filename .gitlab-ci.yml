@@ -1,0 +1,9 @@
+stages:
+  - build
+
+job_build:
+  stage: build
+  script:
+    - echo 'build'
+    - mvn verify
+    - sudo cp target/pdfDraw-0.jar /opt/gitlab-builds/pdfDraw.jar
